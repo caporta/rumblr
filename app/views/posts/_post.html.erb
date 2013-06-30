@@ -1,0 +1,18 @@
+<%= content_tag_for :div, post do %>
+  <div class="media">
+    <div class="pull-left">
+      <%= link_to gravatar_for(post.user), post.user %>
+    </div>
+    <div class="media-body">
+      <div class="well">
+        <p class="lead"><%= post.user.email %></p>
+        <%= image_tag post.image if post.image? %>
+        <p><%= post.body %></p>
+        <% if post.user == current_user %>
+          <%= link_to content_tag(:i, " Edit", class: "glyphicon glyphicon-edit"), edit_post_path(post) %>
+          <%= link_to content_tag(:i, " Delete", class: "glyphicon glyphicon-trash"), post_path(post), method: :delete %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+<% end %>

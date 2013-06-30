@@ -1,0 +1,12 @@
+<%= simple_form_for(@post) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="inputs">
+    <%= f.file_field :image %>
+    <%= f.input :body %>
+  </div>
+
+  <div class="actions">
+    <%= f.button :submit, class: "btn btn-large btn-primary" %>
+  </div>
+<% end %>
