@@ -57,5 +57,6 @@ gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
 gem 'devise', '3.0.0.rc'
 gem 'simple_form'
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
+gem 'aws-sdk'
 gem 'bootstrap-glyphicons'
 gem "acts_as_follower"
