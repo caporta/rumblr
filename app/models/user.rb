@@ -12,6 +12,6 @@ class User < ActiveRecord::Base
   validates :username, presence: true, uniqueness: true
 
   def feed
-    Post.from_users_followed_by(self)
+    Post.from_users_followed_by(self) + self.posts
   end
 end
