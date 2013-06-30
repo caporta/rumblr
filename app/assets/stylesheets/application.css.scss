@@ -9,8 +9,39 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require twitter/bootstrap
  *= require_tree .
  */
 
-@import 'bootstrap/glyphicons';
+form .btn {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.center {
+  text-align: center;
+}
+
+#stats {
+  color: rgba(255,255,255,.69);
+  background-color: rgba(255,255,255,.1);
+  border: none;
+  p {
+    font-weight: bold;
+    font-size: 14px;
+  }
+  a {
+    color: rgba(255,255,255,.69);
+    &:hover {
+      color: rgba(255,255,255,.9);
+      text-decoration: none;
+    }
+  }
+}
+
+// Bootstrap overrides
+$body-bg:                     #2c4762;
+$navbar-inverse-link-color:   rgba(255,255,255,.69);
+$navbar-inverse-bg:           #2c4762;
+
+@import "twitter/bootstrap";
+@import "bootstrap/glyphicons";

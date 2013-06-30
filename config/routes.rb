@@ -1,10 +1,11 @@
 Rumblr::Application.routes.draw do
 
+  devise_for :users
+
   resources :follows
   resources :users
   resources :posts
 
-  devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
